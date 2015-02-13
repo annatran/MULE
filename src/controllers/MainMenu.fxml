@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="700.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="controllers.MainMenuController">
+  <children>
+    <TitledPane animated="false" collapsible="false" expanded="true" layoutX="0.0" layoutY="0.0" prefHeight="700.0" prefWidth="700.0" text="Main Menu">
+      <content>
+        <AnchorPane id="Main Menu" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" style="-fx-background-color: black;">
+          <children>
+            <Button fx:id="playGameButton" layoutX="260.0" layoutY="372.0" mnemonicParsing="false" onAction="#playGame" style="-fx-background-color: transparent;" text="PLAY GAME!" textFill="WHITE">
+              <font>
+                <Font name="LilyUPC" size="32.0" />
+              </font>
+            </Button>
+            <Button fx:id="optionsButton" layoutX="303.0" layoutY="429.0" mnemonicParsing="false" onAction="#options" style="-fx-background-color: transparent;" text="Options" textFill="WHITE">
+              <font>
+                <Font name="LilyUPC" size="24.0" fx:id="x1" />
+              </font>
+            </Button>
+            <Button fx:id="creditsButton" font="$x1" layoutX="305.0" layoutY="485.0" mnemonicParsing="false" style="-fx-background-color: transparent;&#10;" text="Credits" textFill="WHITE" />
+            <Button fx:id="exitButton" font="$x1" layoutX="315.0" layoutY="537.0" mnemonicParsing="false" onAction="#exit" style="-fx-background-color: transparent;" text="Exit" textFill="WHITE" />
+            <Text fill="WHITE" fontSmoothingType="GRAY" layoutX="194.0" layoutY="288.0" strokeType="OUTSIDE" strokeWidth="0.0" text="M.U.L.E.">
+              <font>
+                <Font name="Rod" size="72.0" />
+              </font>
+            </Text>
+            <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="223.0" layoutY="28.0" pickOnBounds="true" preserveRatio="true">
+              <image>
+                <Image url="@../res/M.U.L.E..png" />
+              </image>
+            </ImageView>
+          </children>
+        </AnchorPane>
+      </content>
+    </TitledPane>
+  </children>
+</AnchorPane>

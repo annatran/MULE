@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.shape.*?>
+
+<AnchorPane id="AnchorPane" fx:id="anchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="765.0" prefWidth="700.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="controllers.MapController">
+  <children>
+    <Button fx:id="passButton" defaultButton="false" depthTest="INHERIT" focusTraversable="false" layoutX="582.0" layoutY="608.0" mnemonicParsing="false" mouseTransparent="false" onAction="#buttonPressed" prefWidth="79.0" text="Pass">
+      <effect>
+        <Lighting diffuseConstant="1.7777777777777777" specularConstant="0.6015873015873016" specularExponent="22.22222222222222" surfaceScale="3.492063492063492">
+          <bumpInput>
+            <Shadow />
+          </bumpInput>
+          <light>
+            <javafx.scene.effect.Light.Distant color="#d4bc82" />
+          </light>
+        </Lighting>
+      </effect>
+    </Button>
+    <ProgressBar fx:id="progressBar" layoutX="69.0" layoutY="738.0" prefWidth="617.0" progress="0.0" />
+    <MenuBar focusTraversable="false" layoutX="0.0" layoutY="735.0" useSystemMenuBar="false" visible="true">
+      <menus>
+        <Menu mnemonicParsing="false" text="File">
+          <items>
+            <MenuItem mnemonicParsing="false" onAction="#saveGame" text="Save" fx:id="saveMenuItem" />
+            <MenuItem mnemonicParsing="false" onAction="#openGame" text="Open" fx:id="openMenuItem" />
+			<MenuItem mnemonicParsing="false" onAction="#quitGame" text="Quit" fx:id="quitMenuItem" />
+          </items>
+        </Menu>
+      </menus>
+    </MenuBar>
+  </children>
+</AnchorPane>

@@ -1,0 +1,4 @@
+How to make a distribution jar:
+javafxpackager -createjar -appclass driver.GameUI -srcdir "C:\Projects\team12mule\Game\game\bin" -outdir "C:\Projects\team12mule\Game\game\dist" -outfile game -v
+
+Change srcdir and outdir accordingly to where your source files are located.

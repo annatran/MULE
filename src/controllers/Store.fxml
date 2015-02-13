@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane id="AnchorPane" fx:id="storeAnchor" focusTraversable="true" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" pickOnBounds="true" prefHeight="700.0" prefWidth="700.0" snapToPixel="true" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="controllers.StoreController">
+  <children>
+    <AnchorPane id="Content" layoutX="3.0" layoutY="16.0" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+      <children>
+        <Region layoutX="-3.0" layoutY="-16.0" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="596.0" prefWidth="700.0" style="-fx-background-color: black&#10;" />
+        <Button id="leaveButton" fx:id="leaveStoreButton" layoutX="14.0" layoutY="526.0" mnemonicParsing="false" onMouseClicked="#leaveStoreButtonPressed" text="Leave Store">
+          <effect>
+            <Lighting diffuseConstant="1.7777777777777777" specularConstant="0.6015873015873016" specularExponent="22.22222222222222" surfaceScale="3.492063492063492">
+              <bumpInput>
+                <Shadow />
+              </bumpInput>
+              <light>
+                <javafx.scene.effect.Light.Distant color="#d4bc82" />
+              </light>
+            </Lighting>
+          </effect>
+        </Button>
+        <Button id="buyFoodButton" fx:id="foodButton" layoutX="164.0" layoutY="149.0" mnemonicParsing="false" onMouseClicked="#buyFoodButtonClicked" text="Buy Food" />
+        <Button fx:id="buyEnergyButton" layoutX="164.0" layoutY="208.0" mnemonicParsing="false" onMouseClicked="#buyEnergyButtonClicked" text="Buy Energy" />
+        <Button fx:id="buySmithoreButton" layoutX="166.0" layoutY="276.0" mnemonicParsing="false" onMouseClicked="#buySmithoreButtonClicked" text="Buy Smithore" />
+        <Button fx:id="buyCrystiteButton" layoutX="166.0" layoutY="335.0" mnemonicParsing="false" onMouseClicked="#buyCrystiteButtonClicked" text="Buy Crystite" />
+        <Button fx:id="buyMuleButton" layoutX="166.0" layoutY="401.0" mnemonicParsing="false" onMouseClicked="#buyMuleButtonClicked" text="Buy Mule" />
+        <Button id="sellFoodButton" layoutX="454.0" layoutY="149.0" mnemonicParsing="false" onMouseClicked="#sellFoodButtonClicked" text="Sell Food" />
+        <Button id="sellEnergyButton" layoutX="454.0" layoutY="209.0" mnemonicParsing="false" onMouseClicked="#sellEnergyButtonClicked" text="Sell Energy" />
+        <Button id="sellSmithoreButton" layoutX="456.0" layoutY="277.0" mnemonicParsing="false" onMouseClicked="#sellSmithoreButtonClicked" text="Sell Smithore" />
+        <Button id="sellCrystiteButton" layoutX="456.0" layoutY="335.0" mnemonicParsing="false" onMouseClicked="#sellCrystiteButtonClicked" text="Sell Crystite" />
+        <Button id="sellMuleButton" layoutX="456.0" layoutY="401.0" mnemonicParsing="false" onMouseClicked="#sellMuleButtonClicked" text="Sell Mule" />
+        <Label fx:id="foodLabel" layoutX="75.0" layoutY="149.0" prefWidth="51.0" text="0" textFill="WHITE">
+          <font>
+            <Font size="20.0" fx:id="x1" />
+          </font>
+        </Label>
+        <Label id="foodLabel" fx:id="energyLabel" font="$x1" layoutX="75.0" layoutY="209.0" prefWidth="51.0" text="0" textFill="WHITE" />
+        <Label id="foodLabel" fx:id="smithoreLabel" font="$x1" layoutX="75.0" layoutY="277.0" prefWidth="51.0" text="0" textFill="WHITE" />
+        <Label id="foodLabel" fx:id="crystiteLabel" font="$x1" layoutX="75.0" layoutY="335.0" prefWidth="51.0" text="0" textFill="WHITE" />
+        <Label id="foodLabel" fx:id="muleLabel" font="$x1" layoutX="75.0" layoutY="401.0" prefWidth="51.0" text="0" textFill="WHITE" />
+      </children>
+    </AnchorPane>
+    <Label fx:id="playerLabel" layoutX="9.0" layoutY="582.0" prefHeight="71.0" prefWidth="691.0" text="Town" />
+    <Label fx:id="eventLabel" layoutX="9.0" layoutY="618.0" prefHeight="71.0" prefWidth="677.0" text="Town" />
+    <ProgressBar fx:id="progressBar" layoutX="14.0" layoutY="680.0" prefWidth="672.0" progress="0.0" />
+  </children>
+</AnchorPane>

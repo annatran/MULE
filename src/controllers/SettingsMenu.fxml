@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.collections.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="700.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="controllers.SettingsMenuController">
+  <children>
+    <TitledPane animated="false" collapsible="false" expanded="true" layoutX="0.0" layoutY="0.0" prefHeight="700.0" prefWidth="700.0" text="Settings">
+      <content>
+        <AnchorPane id="Settings" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+          <children>
+            <Button layoutX="214.0" layoutY="583.0" mnemonicParsing="false" onAction="#saveSettings" text="Save Settings" />
+            <Text fill="#996e00" layoutX="194.0" layoutY="284.0" strokeType="OUTSIDE" strokeWidth="0.0" text="M.U.L.E.">
+              <font>
+                <Font name="Vani Bold" size="72.0" />
+              </font>
+            </Text>
+            <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="223.0" layoutY="28.0" pickOnBounds="true" preserveRatio="true">
+              <image>
+                <Image url="@../res/M.U.L.E..png" />
+              </image>
+            </ImageView>
+            <Text fill="#423000" layoutX="69.0" layoutY="353.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Select Difficulty:">
+              <font>
+                <Font name="System Bold" size="20.0" fx:id="x1" />
+              </font>
+            </Text>
+            <ToggleButton id="difficulty_0" contentDisplay="LEFT" graphicTextGap="4.0" layoutX="266.0" layoutY="337.0" mnemonicParsing="false" onAction="#chooseDifficulty" prefWidth="88.0" selected="false" text="Beginner">
+              <toggleGroup>
+                <ToggleGroup fx:id="true" />
+              </toggleGroup>
+            </ToggleButton>
+            <ToggleButton id="difficulty_1" disable="false" layoutX="377.0" layoutY="337.0" mnemonicParsing="false" onAction="#chooseDifficulty" selected="false" text="Intermediate" toggleGroup="$true" />
+            <ToggleButton id="difficulty_2" disable="false" layoutX="514.0" layoutY="337.0" mnemonicParsing="false" onAction="#chooseDifficulty" prefWidth="88.0" text="Expert" toggleGroup="$true" />
+            <Text font="$x1" layoutX="69.0" layoutY="435.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Map Type:">
+              <fill>
+                <Color blue="0.000" green="0.188" red="0.259" fx:id="x2" />
+              </fill>
+            </Text>
+            <Text fill="$x2" font="$x1" layoutX="69.0" layoutY="546.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Number of Players:" />
+            <ChoiceBox id="players" fx:id="numPlayersBox" disable="false" layoutX="266.0" layoutY="530.0" value="1" visible="true">
+              <items>
+                <FXCollections fx:factory="observableArrayList">
+                  <String fx:value="1 Player" />
+                  <String fx:value="2 Players" />
+                  <String fx:value="3 Players" />
+                  <String fx:value="4 Players" />
+                </FXCollections>
+              </items>
+            </ChoiceBox>
+            <ImageView disable="false" fitHeight="75.0" fitWidth="75.0" layoutX="197.0" layoutY="389.0" pickOnBounds="true" preserveRatio="true">
+              <image>
+                <Image url="@../res/river.JPG" />
+              </image>
+            </ImageView>
+            <ImageView fitHeight="75.0" fitWidth="75.0" layoutX="312.0" layoutY="389.0" pickOnBounds="true" preserveRatio="true">
+              <image>
+                <Image url="@../res/plain.jpg" />
+              </image>
+            </ImageView>
+            <ImageView fitHeight="75.0" fitWidth="75.0" layoutX="423.0" layoutY="389.0" pickOnBounds="true" preserveRatio="true">
+              <image>
+                <Image url="@../res/mountain.gif" />
+              </image>
+            </ImageView>
+            <ImageView fitHeight="75.0" fitWidth="75.0" layoutX="532.0" layoutY="389.0" pickOnBounds="true" preserveRatio="true">
+              <image>
+                <Image url="@../res/valley.jpg" />
+              </image>
+            </ImageView>
+            <RadioButton id="mapType_0" layoutX="193.0" layoutY="482.0" mnemonicParsing="false" onAction="#chooseMapType" text="River">
+              <toggleGroup>
+                <ToggleGroup fx:id="false" />
+              </toggleGroup>
+            </RadioButton>
+            <RadioButton id="mapType_1" layoutX="312.0" layoutY="482.0" mnemonicParsing="false" onAction="#chooseMapType" text="Plain" toggleGroup="$false" />
+            <RadioButton id="mapType_2" layoutX="423.0" layoutY="482.0" mnemonicParsing="false" onAction="#chooseMapType" text="Mountain" toggleGroup="$false" />
+            <RadioButton id="mapType_3" layoutX="532.0" layoutY="482.0" mnemonicParsing="false" onAction="#chooseMapType" text="Valley" toggleGroup="$false" />
+            <Button layoutX="365.0" layoutY="583.0" mnemonicParsing="false" onAction="#discardSettings" text="Discard Settings" />
+          </children>
+          <effect>
+            <Lighting diffuseConstant="1.7777777777777777" specularConstant="0.6015873015873016" specularExponent="22.22222222222222" surfaceScale="3.492063492063492">
+              <bumpInput>
+                <Shadow />
+              </bumpInput>
+              <light>
+                <javafx.scene.effect.Light.Distant color="#d4bc82" />
+              </light>
+            </Lighting>
+          </effect>
+        </AnchorPane>
+      </content>
+    </TitledPane>
+  </children>
+</AnchorPane>
